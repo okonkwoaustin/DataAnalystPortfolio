@@ -1,0 +1,672 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #fff; 
+    line-height: 1.7;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Dark Mode Adjustments (can be toggled with JavaScript) */
+body.dark-mode {
+    background-color: #000000;
+    color: #fff; 
+}
+
+/* Layout adjustments */
+header,
+footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 174, 239, 0.1);  
+    color: #fff;
+    padding: 1rem 0; 
+    box-shadow: 0 2px 4px rgba(0, 174, 239, 0.2);  
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+body.dark-mode header {
+    background-color: rgba(30, 30, 30, 0.3); 
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem; 
+    font-weight: 600;
+    color: #00AEEF; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; 
+}
+
+nav ul li {
+    margin-left: 1.5rem; 
+}
+
+nav ul li a {
+    color: #00AEEF; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem; 
+}
+
+nav ul li a:hover {
+    color: #00AEEF; 
+}
+
+/* Social Buttons in Header */
+.social-buttons-header {
+    display: flex;
+    gap: 0.75rem; 
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px; 
+    height: 38px;
+    border-radius: 50%; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    text-decoration: none;
+    font-size: 1.2rem; 
+}
+
+.social-button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.github {
+    background-color: #333;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+/* Hero Section Styles */
+#hero {
+    background: linear-gradient(135deg, #000000, #000000); 
+    padding: 6rem 0; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode #hero {
+    background: linear-gradient(135deg, #000000, #000000); 
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#hero h1 {
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+    color: #fff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.075); 
+}
+
+#hero p {
+    font-size: 1.2rem; 
+    color: #ddd; 
+    line-height: 1.8;
+    margin-bottom: 2rem; 
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem; 
+    background-color: #00AEEF;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px; 
+    font-size: 1rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 174, 239, 0.1); 
+}
+
+.cta-button:hover {
+    background-color: #00AEEF;
+    transform: translateY(-2px);
+}
+
+/* Hero Animation Canvas */
+#hero-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 0; 
+}
+
+/* About Section Styles */
+#about {
+    padding: 4rem 0; 
+    text-align: center;
+    background-color: rgba(0, 174, 239, 0.05); 
+    box-shadow: 0px -2px 4px rgba(0, 174, 239, 0.1); 
+}
+
+body.dark-mode #about {
+    background-color: rgba(30, 30, 30, 0.2); 
+}
+
+#about h2 {
+    font-size: 2.5rem; 
+    color: #00AEEF;
+    margin-bottom: 2rem;
+}
+
+body.dark-mode #about h2 {
+    color: #00AEEF; 
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-content .about-image {
+    text-align: center;
+}
+
+.about-content .about-text {
+    text-align: left;
+}
+
+.about-content img {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem; 
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #fff; 
+    line-height: 1.8;
+}
+
+body.dark-mode .about-text p {
+    color: #fff; 
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #fff; 
+}
+
+body.dark-mode .about-text ul li {
+    color: #fff; 
+}
+
+.about-text ul li:before {
+    content: '\f00c'; 
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #00AEEF;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 5rem 0;
+    background-color: rgba(0, 174, 239, 0.1); 
+    text-align: center;
+}
+
+body.dark-mode #projects {
+    background-color: rgba(30, 30, 30, 0.3); 
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #00AEEF; 
+    margin-bottom: 2rem;
+}
+
+body.dark-mode #projects h2 {
+    color: #00AEEF; 
+}
+
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    border: none;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 174, 239, 0.08);
+    background-color: #2c2c2c; 
+    color: #fff; 
+}
+
+body.dark-mode .project-card {
+    background-color: #2c2c2c; 
+    color: #fff; 
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    color: #00AEEF; 
+}
+
+body.dark-mode .project-card h3 {
+    color: #00AEEF; 
+}
+
+.project-card p {
+    color: #fff; 
+}
+
+body.dark-mode .project-card p {
+    color: #fff; 
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1.25rem;
+    color: #00AEEF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #00AEEF;
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 100px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+/* Skills Section Styles */
+#skills {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: rgba(0, 174, 239, 0.05); 
+    box-shadow: 0px -2px 4px rgba(0, 174, 239, 0.1);
+}
+
+body.dark-mode #skills {
+    background-color: rgba(30, 30, 30, 0.2); 
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #00AEEF; 
+    margin-bottom: 2rem;
+}
+
+body.dark-mode #skills h2 {
+    color: #00AEEF; 
+}
+
+.skills-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.skills-list li {
+    background-color: #2c2c2c; 
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #00AEEF; 
+    box-shadow: 0 2px 4px rgba(0, 174, 239, 0.05);
+    font-size: 1rem;
+    color: #fff; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+body.dark-mode .skills-list li {
+    background-color: #2c2c2c; 
+    border: 1px solid #00AEEF; 
+    color: #fff; 
+}
+
+.skills-list li i {
+    font-size: 1.2rem; 
+    color: #00AEEF; 
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: rgba(0, 174, 239, 0.1); 
+}
+
+body.dark-mode #contact {
+    background-color: rgba(30, 30, 30, 0.3); 
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #00AEEF; 
+    margin-bottom: 2rem;
+}
+
+body.dark-mode #contact h2 {
+    color: #fff; 
+}
+
+#contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1.25rem;
+    border: 1px solid #00AEEF; 
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2c2c2c; 
+    color: #fff; 
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    border: 1px solid #00AEEF; 
+    background-color: #2c2c2c; 
+    color: #fff; 
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #00AEEF;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 174, 239, 0.05);
+}
+
+#contact-form button {
+    padding: 1.25rem 2.5rem;
+    background-color: #00AEEF;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact-form button:hover {
+    background-color: #00AEEF;
+    transform: translateY(-2px);
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+.contact-item {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #00AEEF;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #00AEEF;
+    margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+    color: #00AEEF;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: #fff;
+    line-height: 1.5;
+}
+
+.contact-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #00AEEF;
+}
+
+/* Github Projects Section Styles */
+#github-projects {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: rgba(0, 174, 239, 0.05); 
+    box-shadow: 0px -2px 4px rgba(0, 174, 239, 0.1);
+}
+
+body.dark-mode #github-projects {
+    background-color: rgba(30, 30, 30, 0.2); 
+}
+
+#github-projects h2 {
+    font-size: 2.5rem;
+    color: #00AEEF; 
+    margin-bottom: 1rem;
+}
+
+body.dark-mode #github-projects h2 {
+    color: #00AEEF; 
+}
+
+#github-projects p {
+    font-size: 1.2rem;
+    color: #fff; 
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+body.dark-mode #github-projects p {
+    color: #fff; 
+}
+
+#github-projects img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 174, 239, 0.3); 
+    color: #fff; 
+    text-align: center;
+    padding: 1.5rem 0; 
+}
+
+body.dark-mode footer {
+    background-color: rgba(30, 30, 30, 0.5); 
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .social-buttons-header {
+        margin-top: 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+
+    .about-content .about-image {
+        order: -1;
+    }
+
+    .about-content img {
+        width: 180px;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to sections */
+#hero,
+#about,
+#projects,
+#skills,
+#contact,
+#github-projects {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+    display: none;
+}
