@@ -1,0 +1,245 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okonkwo Austin</title>
+    <meta name="description" content="Data Analysis and Business Intelligence Portfolio Website">
+
+    <link href="image/favicon.jpg" rel="icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/addons/"
+            }
+        }
+    </script>
+
+    <style>
+        /* Basic Responsive Utilities */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .nav-links,
+        .social-buttons-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a,
+        .social-button {
+            text-decoration: none;
+        }
+
+        .hero-content,
+        .about-content,
+        .projects-grid,
+        .contact-info,
+        #contact-form {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .about-image,
+        .about-text {
+            flex: 1 1 300px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-around;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links,
+            .social-buttons-header {
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Okonkwo Austin</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-buttons-header">
+                <a href="https://linkedin.com/in/maduabuchi-okonkwo-b59302224/" class="social-button linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/AustinOkonkwo6/" class="social-button twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/okonkwoaustin/" class="social-button github" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/" class="social-button facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <button class="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Okonkwo Austin | Data Analyst</h1>
+            <p>Transforming data into actionable insights and driving strategic decisions through data analysis.</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+        <div id="hero-animation"></div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="image/Austin.jpg" alt="Your Profile Picture">
+            </div>
+            <div class="about-text">
+                <p>
+                    I am a Data Analyst expert with extensive experience in transforming raw data into actionable insights. My expertise lies in utilizing tools such as Excel, SQL and Power BI to conduct comprehensive data analysis and create insightful visualizations.
+                </p>
+                <p>
+                    I am proficient in:
+                </p>
+                <ul>
+                    <li><b>Data Analysis:</b> Extracting, cleaning, and transforming data to identify trends and patterns.</li>
+                    <li><b>Tools:</b> Excel, SQL, Power BI.</li>
+                </ul>
+            </div>
+        </div>
+        <a href="your-resume.html" class="cta-button" download>Download Resume</a>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1: Beverage Sales Analysis</h3>
+                <img src="image/Beverage%20Sales%20Analysis.jpg" alt="Beverage Sales Analysis" style="width: 100%; height: auto; object-fit: cover;">
+                <p>Designed and implemented a financial performance dashboard using Power BI to track key financial metrics and provide real-time insights to senior management. Automated data extraction and transformation processes, reducing reporting time by 40%.</p>
+                <a href="#" class="view-project-button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: HR Data Analysis</h3>
+                <img src="image/HR%20Analytics.jpg" alt="HR Data Analysis" style="width: 100%; height: auto; object-fit: cover;">
+                <p>Developed a predictive model to identify customers at high risk of churn, enabling proactive retention strategies. Used machine learning techniques in Python with libraries like scikit-learn and pandas. Improved customer retention rate by 15%.</p>
+                <a href="#" class="view-project-button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 3: Iredia Store Customer Analysis</h3>
+                <img src="image/Iredia_Store_Customer_Dashboard.jpg" alt="Iredia Store Customer Analysis" style="width: 100%; height: auto; object-fit: cover;">
+                <p>Conducted a comprehensive analysis of website traffic data using Google Analytics and SQL to identify user behavior patterns. Developed recommendations to improve website usability and content strategy, leading to a 25% increase in user engagement.</p>
+                <a href="#" class="view-project-button">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="github-projects">
+        <h2>View More Projects</h2>
+        <p>Explore additional projects on my GitHub profile to see a broader range of my work and contributions.</p>
+        <a href="https://github.com/okonkwoaustin" class="cta-button" target="_blank">View GitHub Profile</a>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fab fa-microsoft"></i> Excel</li>
+            <li><i class="fas fa-database"></i> SQL</li>
+            <li><i class="fas fa-chart-line"></i> Power BI</li>
+            <li><i class="fas fa-chart-pie"></i> Data Visualization</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+2349075552742">+2349075552742</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:augustineokonkwo744@gmail.com">augustineokonkwo744@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>40 Agboola Ajumobi Crescent, Magodo Phase 2, Lagos<br>Lagos Nigeria</p>
+            </div>
+        </div>
+        <form id="contact-form" action="mailto:augustineokonkwo744@gmail.com" method="post" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button><br>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Okonkwo Austin</p>
+    </footer>
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html"></script><script src="script.js" type="module"></script>
+</body>
+
+</html>
